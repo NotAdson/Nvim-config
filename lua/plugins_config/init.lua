@@ -1,0 +1,6 @@
+require("plugins_config.everforest")
+require("plugins_config.tree")
+require("plugins_config.dev-icons")
+require("plugins_config.telescope")
+require("plugins_config.lualine")
+require("plugins_config.treesitter")
