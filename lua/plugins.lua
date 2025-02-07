@@ -16,6 +16,12 @@ return require('packer').startup(function(use)
 	use 'nvim-tree/nvim-tree.lua'
 	use 'nvim-lualine/lualine.nvim'
 	use 'nvim-treesitter/nvim-treesitter'
+	use 'neovim/nvim-lspconfig' -- Basic LSP support
+	use 'williamboman/mason.nvim' -- Install LSP servers easily
+	use 'williamboman/mason-lspconfig.nvim' -- Bridge for mason and lspconfig
+	use 'hrsh7th/nvim-cmp' -- Completion engine
+	use 'hrsh7th/cmp-nvim-lsp' -- LSP source for nvim-cmp
+	use 'L3MON4D3/LuaSnip' -- Snippet engine (optional)
 
 	use({
 		"neanias/everforest-nvim",
