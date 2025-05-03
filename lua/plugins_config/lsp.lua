@@ -1,11 +1,9 @@
--- Load Mason
 require("mason").setup()
 require("mason-lspconfig").setup({
-    ensure_installed = { "lua_ls", "pyright", "clangd", "jdtls"}, -- Replace with your LSPs
+    ensure_installed = { "lua_ls", "pyright", "clangd", "jdtls", "zls"},
     automatic_installation = true,
 })
 
--- LSP settings
 local lspconfig = require("lspconfig")
 
 -- Common on_attach function
@@ -18,7 +16,7 @@ local on_attach = function(client, bufnr)
 end
 
 -- Enable LSPs
-local servers = { "lua_ls", "pyright", "clangd", "jdtls"}
+local servers = { "lua_ls", "pyright", "clangd", "jdtls", "zls"}
 for _, server in ipairs(servers) do
     lspconfig[server].setup({
         on_attach = on_attach,
